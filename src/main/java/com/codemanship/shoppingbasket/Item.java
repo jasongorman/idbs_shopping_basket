@@ -1,19 +1,15 @@
 package com.codemanship.shoppingbasket;
 
 public class Item {
-    private double price;
-    private double quantity;
+    private final double price;
+    private final double quantity;
 
     public Item(double price, int quantity) {
         this.price = price;
         this.quantity = quantity;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public double getQuantity() {
-        return quantity;
+    double subtotal() {
+        return price * quantity;
     }
 }

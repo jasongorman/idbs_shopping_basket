@@ -12,12 +12,8 @@ public class Basket {
 
     public double total() {
         return items.stream()
-                .mapToDouble(item -> subtotal(item))
+                .mapToDouble(Item::subtotal)
                 .sum();
-    }
-
-    private double subtotal(Item item) {
-        return item.getPrice() * item.getQuantity();
     }
 
     public void add(Item item) {
