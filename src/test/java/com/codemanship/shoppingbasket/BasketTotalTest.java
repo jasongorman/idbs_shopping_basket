@@ -18,4 +18,12 @@ public class BasketTotalTest {
         basket.add(item);
         assertEquals(basket.total(), 100.0, 0);
     }
+
+    @Test
+    void totalOfTwoItems(){
+        Basket basket = new Basket();
+        basket.add(new Item(75.0, 1));
+        basket.add(new Item(50.0, 1));
+        assertEquals(basket.total(), 125.0, 0);
+    }
 }

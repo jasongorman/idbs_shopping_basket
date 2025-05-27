@@ -4,10 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Basket {
-    private List<Item> items = new ArrayList<>();
+    private final List<Item> items;
+
+    public Basket() {
+        items = new ArrayList<>();
+    }
 
     public double total() {
-        return items.isEmpty() ? 0 : 100;
+        return items.stream()
+                .mapToDouble(item -> item.getPrice())
+                .sum();
     }
 
     public void add(Item item) {
