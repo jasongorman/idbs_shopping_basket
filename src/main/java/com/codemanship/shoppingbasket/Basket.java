@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Basket {
-    private List<Item> items = new ArrayList<>();
+    private List<Item> items;
+
+    public Basket() {
+        items = new ArrayList<>();
+    }
 
     public double total() {
         if (items.isEmpty())
