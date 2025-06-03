@@ -25,4 +25,11 @@ public class BasketTotalTest {
         basket.add(new Item(50.0, 1));
         assertEquals(125.0, basket.total(), 0);
     }
+
+    @Test
+    void totalOfItemWithQuantityOfTwo(){
+        Basket basket = new Basket();
+        basket.add(new Item(50.0, 2));
+        assertEquals(100.0, basket.total(), 0);
+    }
 }
