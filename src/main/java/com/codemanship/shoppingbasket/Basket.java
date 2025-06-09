@@ -11,9 +11,7 @@ public class Basket {
     }
 
     public double total() {
-        if (items.isEmpty())
-            return 0;
-        return 100.0;
+        return items.stream().mapToDouble(item -> item.getPrice()).sum();
     }
 
     public void add(Item item) {
