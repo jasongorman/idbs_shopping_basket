@@ -11,7 +11,9 @@ public class Basket {
     }
 
     public double total() {
-        return items.stream().mapToDouble(item -> item.getPrice()).sum();
+        return items.stream()
+                .mapToDouble(item -> item.getPrice())
+                .sum();
     }
 
     public void add(Item item) {
